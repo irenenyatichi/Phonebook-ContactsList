@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvContact"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="20dp"
@@ -9,61 +10,61 @@
     app:cardElevation="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cvContacts"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#86C6C0">
 
         <ImageView
-            android:id="@+id/ivPerson1"
-            android:layout_width="75dp"
-            android:layout_height="67dp"
+            android:id="@+id/ivContact"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="25dp"
             android:elevation="5dp"
-            app:layout_constraintBottom_toBottomOf="@+id/etEmail1"
-            app:layout_constraintEnd_toStartOf="@+id/etEmail1"
+            app:layout_constraintBottom_toBottomOf="@+id/tvemail1"
+            app:layout_constraintEnd_toStartOf="@+id/tvemail1"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.612"
             app:srcCompat="@drawable/ic_baseline_face_24" />
 
-        <EditText
-            android:id="@+id/etName1"
+        <TextView
+            android:id="@+id/tvname1"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="12dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintStart_toEndOf="@+id/ivPerson1"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/ivContact"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Name" />
 
 
-        <EditText
-            android:id="@+id/etPhone1"
+        <TextView
+            android:id="@+id/tvphone1"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="52dp"
             android:ems="10"
-            android:inputType="phone"
-            android:text="Number"
-            app:layout_constraintStart_toEndOf="@+id/ivPerson1"
-            app:layout_constraintTop_toTopOf="@+id/etName1" />
+            app:layout_constraintStart_toEndOf="@+id/ivContact"
+            app:layout_constraintTop_toTopOf="@+id/tvname1"
+            tools:text="Number" />
 
-        <EditText
-            android:id="@+id/etEmail1"
-            android:layout_width="260dp"
+        <TextView
+            android:id="@+id/tvemail1"
+            android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:text="Email"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPhone1" />
+            app:layout_constraintTop_toBottomOf="@+id/tvphone1"
+            tools:text="Email" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
